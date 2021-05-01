@@ -7,7 +7,7 @@ before_install:
   - docker build -t gaurav/docker-reactapp -f Dockerfile.dev .
 
 script:
-  - docker run -e CI=true gaurav/docker-reactapp npm run test -- --coverage
+  - docker run gaurav/docker-reactapp npm run test -- --coverage
 
 deploy:
   provider: elasticbeanstalk
