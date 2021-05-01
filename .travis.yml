@@ -8,13 +8,3 @@ before_install:
 
 script:
   - docker run gaurav/docker-reactapp npm run test -- --coverage
-
-deploy:
-  provider: elasticbeanstalk
-  region: "us-east-2"
-  app: "docker-reactapp"
-  env: "Dockerreactapp-env"
-  bucket_name: "elasticbeanstalk-us-east-2-281006437285"
-  bucket_path: "docker-reactapp"
-  on:
-    branch: master
