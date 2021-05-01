@@ -7,4 +7,4 @@ before_install:
   - docker build -t gaurav/docker-reactapp -f Dockerfile.dev .
 
 script:
-  - docker run gaurav/docker-reactapp npm run test -- --coverage
+  - travis_wait 30 docker run gaurav/docker-reactapp npm run test -- --coverage
